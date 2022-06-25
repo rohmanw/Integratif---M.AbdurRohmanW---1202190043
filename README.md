@@ -1,8 +1,6 @@
-M. Abdur Rohman Wachid
-1202190043
-IT-02-02
+# Final Project Report
 
-# Install Laravel 9 on Windows
+### Install Laravel 9 on Windows
 
 1. ```markdown
    Required XAMPP for Windows
@@ -65,3 +63,64 @@ IT-02-02
 ![image-20220603154701101](https://user-images.githubusercontent.com/93067781/171827668-4f3704fb-2cbf-47bd-a4b6-f274f23b826d.png)
 
 #### **Finished To Install Laravel 9 on Windows**
+
+
+
+### Database and RSS
+
+1. Change DB_DATABASE in file .env. according to phpmyadmin.
+
+   ![image-20220625170302208](https://user-images.githubusercontent.com/93067781/175769358-1cf397f1-fde3-49b2-853b-515054ca494d.png)
+
+   
+
+2. Create file for rss table and news table.
+
+   ```markdown
+   php artisan make:migration create_rss_table
+   php artisan make:migration create_news_table
+   ```
+
+3. Create seeder and controller.
+
+   ```markdown
+   php artisan make:model Rss --seed --controller
+   ```
+
+4. Create news controller.
+
+   ```markdown
+   php artisan make:model News --controller
+   ```
+
+5. Edit file NewsController.php
+
+   ![image-20220625180230827](https://user-images.githubusercontent.com/93067781/175770716-aeca7621-aebe-449e-afaf-0fe9a9636dcc.png)
+
+   
+
+6. Add Route in routes/web.php
+
+   ![image-20220625180435951](https://user-images.githubusercontent.com/93067781/175770778-6c1a87bb-89c5-45e6-b969-2e5326c22b3c.png)
+
+7. Run migration:fresh, db:seed, and artisan serve
+
+   ```markdown
+   php artisan migrate:fresh
+   php artisan db:seed
+   php artisan serve
+   ```
+
+8. Check on database phpmyadmin
+
+   ![image-20220625222521908](https://user-images.githubusercontent.com/93067781/175780155-d2e2f21c-6f22-4feb-a819-2ff0240477cb.png)
+   
+   ![image-20220625222256957](https://user-images.githubusercontent.com/93067781/175780087-13116723-2056-4e77-8b7b-e899b6b74747.png)
+   
+8. Check on your browser
+
+   ![image-20220625222726538](https://user-images.githubusercontent.com/93067781/175780228-a7d0836a-011d-4150-b2ba-c49b608e214f.png)
+   
+   
+   
+   
